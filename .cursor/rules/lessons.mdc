@@ -14,3 +14,39 @@
 
 ## Best Practices Discovered
 <!-- Document effective patterns that emerge --> ✅
+
+# 📝 Lessons & Pitfalls
+
+## 1. Rule-Type Mix-ups
+* **Always rule** → `alwaysApply: true` (globs ignored).
+* **Auto-Attach** → `globs:` list **only**, `alwaysApply: false`.
+* **Agent-Select** → `description:` only; no globs.
+* **Manual** → all three blank.
+> Mixing `alwaysApply: true` with `globs` silently disables glob filtering.
+
+## 2. Glob Syntax Gotchas
+* **NEVER** wrap globs in quotes — they're parsed literally.
+  * ✅ `globs: src/**/*.ts, test/**/*.ts`
+  * ❌ `globs: "src/**/*.ts"`
+* **NO** brace-expansions `{js,ts}`; split with commas instead.
+* Keep patterns relative to repo root; add `**/` prefix if they lack `/`.
+
+## 3. Line Budget Reminder
+Stay under 25 lines per rule (see Housekeeping rule).
+
+<example>
+---
+description:
+
+globs: src/**/*.tsx, src/**/*.jsx
+alwaysApply: false
+---
+</example>
+
+<example type="invalid">
+---
+description: "Applies to all code"
+globs: "src/**/*.ts" # quoted – will fail
+alwaysApply: true      # glob ignored
+---
+</example>
