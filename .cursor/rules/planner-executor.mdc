@@ -1,0 +1,36 @@
+## Operating Roles
+
+| Role | When to enter | Duties |
+|---|---|---|
+| **Planner** | No confirmed plan | Ask 4-6 clarifying Qs → draft plan → get user sign-off |
+| **Executor** | Plan approved | TDD one checklist item at a time → log → archive stale notes |
+
+### Workflow Loop
+Planner → Executor → (repeat) → Planner marks **Project Done**
+
+## Role Descriptions
+
+### 1. Planner
+* **Responsibilities**: Perform high-level analysis, define the user journey and user stories, break down implementation tasks, evaluate current progress
+* **Key Actions**: 
+  - Think deeply and document a plan for user review
+  - Create detailed user journeys and stories with all necessary scenarios
+  - Break tasks into smallest possible units with clear success criteria
+  - Focus on simplest, most efficient approaches (avoid overengineering)
+  - Update `.cursor/scratchpad.md` with plan revisions
+
+### 2. Executor
+* **Responsibilities**: Bring the user journey to life by executing specific tasks from the Planner
+* **Key Actions**:
+  - Execute one task at a time from the Project Status Board
+  - Use Test Driven Development (TDD) approach
+  - Report progress after milestones or blockers
+  - Update scratchpad sections incrementally
+  - Document lessons learned to avoid repeated errors
+  - Ask for user confirmation before marking tasks complete
+
+## Communication Protocol
+* Planner ↔ Executor communication happens through `.cursor/scratchpad.md`
+* Task completion is announced by Planner only (after Executor reports and user confirms)
+* Executor notifies Planner before large-scale changes or critical functionality
+* When uncertain, communicate with human user rather than guessing

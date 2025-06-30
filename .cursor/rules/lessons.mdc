@@ -1,0 +1,16 @@
+# Lessons Learned
+
+## From Original Instructions
+* Include info useful for debugging in the program output
+* Read the file before you try to edit it
+* If there are vulnerabilities that appear in the terminal, run `npm audit` before proceeding
+* Always ask before using the `-force` git command
+
+## Project-Specific Lessons
+<!-- Add new lessons here as they're discovered -->
+
+## Common Pitfalls
+<!-- Document recurring issues and their solutions -->
+
+## Best Practices Discovered
+<!-- Document effective patterns that emerge during development -->

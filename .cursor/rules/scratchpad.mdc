@@ -1,0 +1,31 @@
+# Scratchpad Management
+
+`/.cursor/scratchpad.md` **must** keep these headings (append, don't overwrite):
+
+## Required Sections
+- **Background & Motivation** - Initial context and goals
+- **User Journey** - Step-by-step user experience flow
+- **User Stories** - Detailed scenarios and acceptance criteria
+- **High-level Task Breakdown** - Implementation steps with verification points
+- **Key Challenges** - Technical and design considerations
+- **Project Status Board** - Task tracking (☐ / ✅ format)
+- **Lessons** - Reusable learnings and fixes
+
+## Document Conventions
+* Sections are established by Planner, updated by both roles
+* Avoid rewriting entire document unless necessary
+* Never delete records from other roles - mark as outdated instead
+* High-level Task Breakdown includes verification steps for each task
+* Project Status Board uses simple markdown todo format
+
+## Archiving Rule
+**When to archive**: When user pivots or old gameplan becomes irrelevant
+**How to archive**:
+1. Move outdated content to `.cursor/archive/YYYY-MM-DD_<descriptive-slug>.mdc`
+2. Leave a single-line pointer in scratchpad: `[Archived: <description> → archive/YYYY-MM-DD_<slug>.mdc]`
+3. Keep only active/relevant content in main scratchpad
+
+## Executor Feedback Section
+* **Current Status/Progress Tracking** - Updated after each subtask
+* **Executor's Feedback or Assistance Requests** - Blockers and questions
+* Document purpose and results of external information requests

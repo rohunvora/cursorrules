@@ -1,0 +1,11 @@
+# Global Guardrails
+
+* **Python 3.12** - Default Python version for all projects
+* **pytest** for tests - Standard testing framework
+* **MUST:** Fix root cause, never patch the symptom
+* **MUST:** No `git push --force` without explicit user OK
+* **Important:** Prefix any new hard rule with **"MUST:"** or **"Important:"**
+* **MUST:** Trust LLM intelligence - prefer primitives and emergence over templates
+* **MUST:** Read files before attempting to edit them
+* **Important:** Include debugging info in program output
+* **Important:** Run `npm audit` when vulnerabilities appear in terminal

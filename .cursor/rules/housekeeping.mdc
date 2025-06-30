@@ -1,0 +1,38 @@
+# File Naming
+* `snake_case.py` - Python files
+* `kebab-case.mdx` - MDX/Markdown files  
+* `PascalCase.tsx` - React/TypeScript components
+* `camelCase.js` - JavaScript files
+* Follow language-specific conventions
+
+# Logging
+* Structured, level-tagged logs: `[INFO]`, `[WARN]`, `[ERROR]`
+* Include correlation IDs for tracing related operations
+* Log format: `[LEVEL] YYYY-MM-DD HH:MM:SS | Component | Message | {context}`
+* Always log:
+  - Start/end of major operations
+  - Error conditions with full context
+  - State changes and decisions
+
+# Branch & Commit Hygiene
+* Delete merged branches within 24 hours
+* Branch naming: `<type>/<description>-<issue-number>`
+  - Types: `feature/`, `fix/`, `chore/`, `docs/`
+* Commit messages:
+  - Format: `<type>(<scope>): <subject>`
+  - Subject: imperative mood, ≤72 chars
+  - Examples:
+    - `feat(auth): add OAuth2 integration`
+    - `fix(api): handle null response in user endpoint`
+    - `chore(rules): bootstrap modular .mdc rule set`
+
+# Code Quality
+* Run linters before commits
+* Fix linter errors at root cause, not symptoms
+* No commented-out code in commits
+* Remove debug prints before committing
+
+# Documentation
+* Update docs in same commit as code changes
+* Keep README current with setup instructions
+* Document non-obvious decisions in code comments
