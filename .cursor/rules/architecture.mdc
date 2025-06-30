@@ -1,3 +1,26 @@
+# 📂 Rule Folder Architecture
+
+All rule files MUST conform to the following path pattern:
+```
+.cursor/rules/<domain>/<slug>-<type>.mdc
+```
+where:
+* **<domain>** – logical area (e.g. `core-rules`, `ui-rules`, `ts-rules`, `py-rules`, `tool-rules`, `testing-rules`, `my-rules`).
+* **<slug>** – short kebab-case description (`error-handling`, `import-style`).
+* **<type>** – `always`, `auto`, `agent`, or `manual` (see 00-global.mdc).
+
+> If a needed domain folder does not exist, the agent MUST create it.
+
+### Examples
+| Use-case | Path |
+|----------|------|
+| Global accessibility lint | `.cursor/rules/ui-rules/accessibility-always.mdc` |
+| TS import order (auto) | `.cursor/rules/ts-rules/import-order-auto.mdc` |
+| "Talk like a pirate" agent rule | `.cursor/rules/core-rules/pirate-speech-agent.mdc` |
+| Personal experiments | `.cursor/rules/my-rules/tmp-refactor-manual.mdc` |
+
+---
+
 # Architecture & Design Philosophy
 
 ## Design Philosophy: Primitives Over Templates
