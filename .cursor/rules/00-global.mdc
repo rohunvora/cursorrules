@@ -1,11 +1,40 @@
-# Global Guardrails
+# 🧭 Global Cursor Rules Cheat-Sheet
 
-* **Python 3.12** - Default Python version ✅
-* **pytest** for tests ✅
-* **MUST:** Fix root cause, not symptoms ✅
+> This file is **always** loaded. It teaches the agent how to write, name and apply every other rule.
+
+## 1. Meta-Rule — "Rule-Generating-Agent"
+* Treat this document itself as a template for creating or updating rules.
+* When the user requests a new rule or behaviour change, the agent MUST:
+  1. Select the correct rule type (see table below).
+  2. Place the file in the correct folder and use the `<slug>-<type>.mdc` naming pattern.
+  3. Include YAML front-matter with all three keys (`description`, `globs`, `alwaysApply`).
+  4. Add one **valid** and one **invalid** `<example>` block.
+  5. Stay under **25 lines** (hard cap 50).
+* After writing or updating a rule, the agent replies with:
+  ```
+  AutoRuleGen Success: <relative path to rule>
+  Rule Type: <Always|Auto|Agent|Manual>
+  Rule Description: <description field>
+  ```
+
+## 2. Canonical Rule Types & Naming
+| Type  | Front-matter signature | Loads when…                                | File suffix |
+|-------|------------------------|--------------------------------------------|-------------|
+| Always | `alwaysApply: true` *(globs ignored)* | Every chat / Cmd-K request                  | `-always.mdc` |
+| Auto-Attach | `globs: <comma list>` | Current file **matches** a glob            | `-auto.mdc` |
+| Agent-Select | `description:` only | Agent fetches it via Cmd-K / search        | `-agent.mdc` |
+| Manual | *(all three blank)*      | Only when user explicitly references it    | `-manual.mdc` |
+
+**Important:** Mixing `alwaysApply: true` with `globs:` disables glob filtering.
+
+## 3. Folder Taxonomy (see architecture.mdc)
+Rules live under `.cursor/rules/<domain>/` (e.g. `ui-rules/`, `ts-rules/`).
+
+---
+## 4. Legacy Hard Rules (still enforced)
 * **MUST:** No `git push --force` without explicit user OK ✅
 * **Important:** Prefix hard rules with **"MUST:"** or **"Important:"** 🔧
-* **MUST:** Trust LLM intelligence - prefer primitives over templates 🔧
+* **MUST:** Trust LLM intelligence – prefer primitives over templates 🔧
 * **MUST:** Read files before editing ✅
 * **Important:** Include debug info in output ✅
 * **Important:** Run `npm audit` for vulnerabilities ✅
