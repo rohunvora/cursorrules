@@ -1,3 +1,21 @@
+# 🧹 Housekeeping Rule
+
+## Critical Rules
+1. **Quarterly prune:** every 90 days consolidate tiny rules, delete obsolete ones, keep <15 total per domain.
+2. **Line budget:** target ≤25 lines, hard cap 50 (excluding front-matter & examples).
+3. **Indexing hygiene:** update `.cursorindexingignore` & `.repomixignore` when adding large or generated files (>1 MB).
+4. **Archive rule files** to `.cursor/archive/YYYY-MM-DD_<slug>.mdc` instead of deleting.
+5. **Editor setting fix:** ensure the following snippet is present in `.vscode/settings.json` or global settings to avoid .mdc viewer bugs:
+   ```json
+   "workbench.editorAssociations": {
+     "*.mdc": "default"
+   }
+   ```
+6. **Rule update process:** let the "Rule-Generating-Agent" handle edits; manual edits require peer review.
+
+---
+<!-- retain existing operational checklists below -->
+
 # File Naming
 * `snake_case.py` - Python files
 * `kebab-case.mdx` - MDX/Markdown files
