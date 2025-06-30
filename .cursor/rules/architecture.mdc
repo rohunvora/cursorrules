@@ -1,0 +1,46 @@
+# Architecture & Design Philosophy
+
+## Design Philosophy: Primitives Over Templates
+
+When designing LLM-powered systems, prefer primitives and emergence over templates and rigid structures:
+
+### Trust LLM Intelligence
+* **DON'T** create template responses or predetermined patterns
+* **DO** provide raw data and let the LLM interpret contextually
+* **DON'T** build complex state machines or rule engines
+* **DO** pass context and let intelligence emerge naturally
+
+### Examples of This Philosophy:
+
+#### ❌ Template Thinking:
+```python
+if price_change > 50:
+    alert = "FOMO_WARNING"
+elif time_since_loss < 300:
+    alert = "REVENGE_TRADE"
+```
+
+#### ✅ Primitives Thinking:
+```python
+context = {
+    'price_change': price_change,
+    'time_since_loss': time_since_loss,
+    'user_history': recent_trades
+}
+# Let GPT decide what's significant
+```
+
+### Key Principles:
+1. **Data > Templates**: Provide rich context, not categories
+2. **Principles > Rules**: Give guiding principles, not if/else logic
+3. **Natural > Structured**: Let conversation flow naturally
+4. **Flexible > Fixed**: Store data flexibly (JSON) not rigid schemas
+5. **Emergence > Prescription**: Let patterns emerge from usage
+
+### When Building LLM-Powered Features:
+* Ask: "What raw data helps GPT understand?"
+* Don't ask: "What categories/templates do we need?"
+* Trust the LLM with ambiguity
+* Use LLM strengths (context), not weaknesses (rigid rules)
+
+**Remember**: LLMs excel at nuance and context. Don't constrain them with traditional programming limits.
