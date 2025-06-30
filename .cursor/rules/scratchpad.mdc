@@ -3,13 +3,50 @@
 `/.cursor/scratchpad.md` **must** keep these headings (append, don't overwrite): ✅
 
 ## Required Sections
+---
+description: Communication hub between Planner and Executor roles - structured sections for active work
+alwaysApply: false
+---
+# Scratchpad Structure
+
+## 📋 STATUS BOARD
+<!-- Planner updates this section with tasks -->
+### Active Tasks
+- [ ] Task format: `[ID] - Description (Status: Not Started)`
+- [ ] Include acceptance criteria for each task
+- [ ] Link to detailed specs if needed
+
+### Planning Documents
 - **Background & Motivation** - Initial context and goals ✅
 - **User Journey** - Step-by-step user experience ✅
 - **User Stories** - Scenarios with acceptance criteria 🔧
 - **High-level Task Breakdown** - Steps with verification points 🔧
 - **Key Challenges** - Technical/design considerations ✅
-- **Project Status Board** - Task tracking (☐ / ✅) ✅
-- **Lessons** - Reusable learnings and fixes ✅
+
+## 🔄 IN PROGRESS
+<!-- Executor works here - one task at a time -->
+### Current Task: [ID]
+- **Status**: In Progress
+- **Started**: [Date/Time]
+- **Test Results**: 
+- **Blockers**: 
+
+## ✅ COMPLETED ARCHIVE
+<!-- Move completed tasks here - keep last 5 visible -->
+### Recently Completed
+- [x] Example: Task completed on [date]
+
+## � COMMUNICATION LOG
+<!-- Async messages between roles -->
+### Messages
+- **[Date] Planner**: Message
+- **[Date] Executor**: Response
+
+## 🗑️ ARCHIVE RULES
+- Archive completed sections weekly
+- Keep only last 5 completed tasks visible
+- Move archives to `.cursor/archives/[date].md`
+- When user pivots: Archive entire scratchpad with descriptive name
 
 ## Document Conventions
 * Planner creates sections, both roles update 🔧
@@ -17,15 +54,3 @@
 * Mark outdated content, don't delete 🔧
 * Task Breakdown includes verification steps ✅
 * Status Board uses markdown todos ✅
-
-## Archiving Rule
-**When**: User pivots or plan becomes irrelevant ✅
-**How**:
-1. Move to `.cursor/archive/YYYY-MM-DD_<slug>.mdc` 🔧
-2. Leave pointer: `[Archived: <desc> → archive/YYYY-MM-DD_<slug>.mdc]` 🔧
-3. Keep only active content in scratchpad ✅
-
-## Executor Feedback Section
-* **Current Status/Progress** - Updated per subtask 🔧
-* **Feedback/Assistance Requests** - Blockers and questions 🔧
-* Document external info requests with purpose/results 🔧

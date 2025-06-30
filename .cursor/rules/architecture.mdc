@@ -4,6 +4,11 @@
 
 When designing LLM-powered systems, prefer primitives and emergence over templates and rigid structures:
 
+---
+description: Architectural principles for LLM-powered features emphasizing context over constraints
+globs: "**/*.py, **/*.ts, **/*.tsx"
+alwaysApply: false
+---
 ### Trust LLM Intelligence
 * **DON'T** create template responses or predetermined patterns
 * **DO** provide raw data and let the LLM interpret contextually
@@ -44,3 +49,44 @@ context = {
 * Use LLM strengths (context), not weaknesses (rigid rules)
 
 **Remember**: LLMs excel at nuance and context. Don't constrain them with traditional programming limits.
+
+### Real-World Applications
+
+#### Example 1: User Notifications
+❌ **Template Approach**:
+```python
+NOTIFICATION_TEMPLATES = {
+    'payment_success': "Payment of ${amount} successful",
+    'payment_failed': "Payment failed: {reason}"
+}
+```
+
+✅ **Context Approach**:
+```python
+notification_context = {
+    'event_type': 'payment',
+    'status': 'success',
+    'amount': 150.00,
+    'user_history': user.recent_transactions,
+    'time_of_day': datetime.now(),
+    'user_preferences': user.notification_settings
+}
+# Let LLM craft appropriate message with full context
+```
+
+#### Example 2: Error Handling
+❌ **Fixed Categories**:
+```python
+ERROR_TYPES = ['network', 'validation', 'permission', 'unknown']
+```
+
+✅ **Rich Context**:
+```python
+error_context = {
+    'error': str(e),
+    'stack_trace': traceback.format_exc(),
+    'user_action': current_action,
+    'system_state': get_system_state(),
+    'recent_events': event_log[-10:]
+}
+```

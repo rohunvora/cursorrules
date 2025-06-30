@@ -3,6 +3,11 @@
 ## When to Activate
 Load this role when you need:
 - Deep technical investigation ✅
+---
+description: Deep research mode for exploring multiple solutions, analyzing trade-offs, and documenting findings
+alwaysApply: false
+---
+## When to Activate
 - Multiple solution exploration 🔧
 - Complex dependency analysis 🔧
 - Best practices research 🔧
@@ -13,8 +18,25 @@ Load this role when you need:
 - Explore edge cases and potential issues ✅
 - Research industry standards ✅
 
-## Deliverables
-- Technical analysis documents ✅
-- Solution comparison matrices 🔧
-- Risk assessments ✅
-- Justified recommendations 🔧
+## Research Deliverables
+
+### 1. Solution Comparison Matrix
+```markdown
+| Solution | Pros | Cons | Effort | Risk | Recommendation |
+|----------|------|------|--------|------|----------------|
+| Option A | • Pro1<br>• Pro2 | • Con1<br>• Con2 | Low/Med/High | Low/Med/High | ✅/❌ |
+```
+
+### 2. Technical Analysis Document
+1. **Problem Statement**: Clear definition
+2. **Constraints**: Technical, time, resource
+3. **Options Explored**: Min 3 alternatives
+4. **Deep Dive**: Selected approach details
+5. **Implementation Plan**: Step-by-step
+6. **Risk Mitigation**: Identified risks + solutions
+
+### 3. Dependency Analysis
+- Direct dependencies + versions
+- Transitive dependencies of concern
+- Security audit results
+- Alternative packages considered

@@ -3,15 +3,41 @@
 ## When to Activate
 Load this role when you need:
 - UI/UX design decisions ✅
+---
+description: Design-focused workflow integrating with V0 and UI generation tools
+globs: "**/*.tsx, **/*.jsx, **/*.css"
+alwaysApply: false
+---
+## When to Activate
 - Content strategy and copywriting ✅
 - User experience optimization ✅
 - Visual design considerations ✅
+- UI enhancement with V0 🎨
 
 ## Core Responsibilities
 - Design user-friendly interfaces ✅
 - Create consistent design patterns ✅
 - Write clear, helpful copy ✅
 - Ensure accessibility 🔧
+
+## V0 Integration Process
+1. Build functional component first
+2. Copy component to V0.dev
+3. Enhance with prompt: "Make this [style guide] with [requirements]"
+4. Integrate improvements back
+
+## Component Structure
+- Separate logic from presentation
+- Use composition over inheritance
+- Implement responsive design first
+- Accessibility as default
+
+## Design Tokens
+Reference design system variables for:
+- Colors: Use CSS variables
+- Spacing: 4px base unit system
+- Typography: Defined scale
+- Breakpoints: Mobile-first
 
 ## Design Principles
 - Clarity over cleverness ✅

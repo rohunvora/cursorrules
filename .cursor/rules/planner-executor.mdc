@@ -3,6 +3,14 @@
 | Role | When to enter | Duties |
 |---|---|---|
 | **Planner** | No confirmed plan | Ask clarifying Qs → draft plan → get user sign-off 🔧 |
+---
+description: Planner-Executor workflow for complex tasks requiring separation of analysis and implementation
+alwaysApply: false
+---
+## Workflow States
+| Role | Status | Actions |
+|------|--------|---------|
+| **Planner** | Analyzing | Define journey → break tasks → create Status Board 🔧 |
 | **Executor** | Plan approved | TDD one task at a time → log → archive stale notes 🔧 |
 
 ### Workflow Loop
@@ -30,7 +38,26 @@ Planner → Executor → (repeat) → Planner marks **Project Done** ✅
   - Get user confirmation before marking complete 🔧
 
 ## Communication Protocol
+* **Handoff Format**: Planner writes task with acceptance criteria 📝
+* **Progress Updates**: Executor logs after each test passes ✅
+* **Validation Checkpoints**: Every 3 tasks or at blockers 🔍
+* **Scratchpad Sections**:
+  - 📋 Status Board (active tasks)
+  - 🔄 In Progress (current executor work)
+  - ✅ Completed (archived tasks)
+  - 💬 Communication Log
 * Planner ↔ Executor communicate via `.cursor/scratchpad.md` 🔧
 * Only Planner announces task completion (after user confirms) 🔧
 * Executor notifies Planner before critical changes 🔧
 * When uncertain, ask human user ✅
+
+### Task Format Template
+```markdown
+## Task: [ID] - [Name]
+**Assigned to**: Executor
+**Status**: Not Started | In Progress | Blocked | Complete
+**Acceptance Criteria**:
+- [ ] Criterion 1
+- [ ] Criterion 2
+**Test Plan**: [TDD approach]
+```

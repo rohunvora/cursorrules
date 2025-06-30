@@ -4,6 +4,29 @@
 * `PascalCase.tsx` - React/TypeScript components
 * `camelCase.js` - JavaScript files
 
+---
+description: Automated cleanup and maintenance rules for project organization
+alwaysApply: false
+---
+## Cleanup Triggers
+
+### Daily
+- [ ] Archive completed scratchpad sections
+- [ ] Clear terminal outputs over 1000 lines
+- [ ] Update task progress in Status Board
+
+### Weekly  
+- [ ] Archive old scratchpad to `.cursor/archives/`
+- [ ] Review and consolidate lessons.mdc
+- [ ] Clean up unused imports
+- [ ] Remove commented code blocks
+
+### On PR/Merge
+- [ ] Run linters and formatters
+- [ ] Update documentation
+- [ ] Clean up feature branches
+- [ ] Archive feature-specific notes
+
 # Logging
 * Use level tags: `[INFO]`, `[WARN]`, `[ERROR]`
 * Include correlation IDs for related operations

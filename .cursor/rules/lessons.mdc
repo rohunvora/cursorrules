@@ -3,14 +3,38 @@
 ## From Original Instructions
 * Include debug info in output ✅
 * Read files before editing ✅
+---
+description: Accumulated project-specific knowledge from errors and solutions - append only, never delete
+alwaysApply: true
+---
+# Project Lessons Log
+
+## Format for New Entries
+```
+### [DATE] - [CATEGORY]: Brief Description
+**Context**: What we were trying to do
+**Error/Issue**: What went wrong
+**Solution**: How we fixed it
+**Prevention**: Rule or practice to avoid repeat
+---
+```
+
+## Categories
+- 🐛 BUG: Code errors and fixes
+- 🏗️ ARCH: Architecture decisions
+- 🔧 TOOL: Tool-specific learnings
+- 📦 DEP: Dependency issues
+- 🚀 PERF: Performance optimizations
+
+## General Lessons
 * Run `npm audit` for vulnerabilities ✅
 * Ask before using `-force` git commands 🔧
 
 ## Project-Specific Lessons
-<!-- Add new lessons here as discovered --> ✅
+<!-- Append new lessons below - never delete existing ones -->
 
 ## Common Pitfalls
-<!-- Document recurring issues and solutions --> ✅
+<!-- Document recurring issues and solutions -->
 
 ## Best Practices Discovered
-<!-- Document effective patterns that emerge --> ✅
+<!-- Document effective patterns that emerge -->
