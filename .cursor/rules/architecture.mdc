@@ -2,7 +2,7 @@
 
 ## Design Philosophy: Primitives Over Templates
 
-When designing systems that leverage LLM intelligence (like GPT-4), prefer primitives and emergence over templates and rigid structures:
+When designing LLM-powered systems, prefer primitives and emergence over templates and rigid structures:
 
 ### Trust LLM Intelligence
 * **DON'T** create template responses or predetermined patterns
@@ -31,16 +31,16 @@ context = {
 ```
 
 ### Key Principles:
-1. **Data > Templates**: Provide rich context, not predetermined categories
-2. **Principles > Rules**: Give the LLM guiding principles, not if/else logic
-3. **Natural > Structured**: Let conversation flow naturally without rigid state
-4. **Flexible > Fixed**: Store data flexibly (JSON) rather than rigid schemas
-5. **Emergence > Prescription**: Let patterns emerge from usage, don't prescribe them
+1. **Data > Templates**: Provide rich context, not categories
+2. **Principles > Rules**: Give guiding principles, not if/else logic
+3. **Natural > Structured**: Let conversation flow naturally
+4. **Flexible > Fixed**: Store data flexibly (JSON) not rigid schemas
+5. **Emergence > Prescription**: Let patterns emerge from usage
 
 ### When Building LLM-Powered Features:
-* Start by asking: "What raw data would help GPT understand this?"
-* Avoid asking: "What categories/templates do we need?"
-* Trust the LLM to handle ambiguity better than your code
-* Use the LLM's strength (understanding context) not weakness (following rigid rules)
+* Ask: "What raw data helps GPT understand?"
+* Don't ask: "What categories/templates do we need?"
+* Trust the LLM with ambiguity
+* Use LLM strengths (context), not weaknesses (rigid rules)
 
-Remember: LLMs excel at understanding nuance and context. Don't constrain them with the limitations of traditional programming paradigms.
+**Remember**: LLMs excel at nuance and context. Don't constrain them with traditional programming limits.

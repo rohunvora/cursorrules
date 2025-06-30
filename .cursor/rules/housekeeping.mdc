@@ -1,17 +1,16 @@
 # File Naming
 * `snake_case.py` - Python files
-* `kebab-case.mdx` - MDX/Markdown files  
+* `kebab-case.mdx` - MDX/Markdown files
 * `PascalCase.tsx` - React/TypeScript components
 * `camelCase.js` - JavaScript files
-* Follow language-specific conventions
 
 # Logging
-* Structured, level-tagged logs: `[INFO]`, `[WARN]`, `[ERROR]`
-* Include correlation IDs for tracing related operations
-* Log format: `[LEVEL] YYYY-MM-DD HH:MM:SS | Component | Message | {context}`
+* Use level tags: `[INFO]`, `[WARN]`, `[ERROR]`
+* Include correlation IDs for related operations
+* Format: `[LEVEL] YYYY-MM-DD HH:MM:SS | Component | Message | {context}`
 * Always log:
-  - Start/end of major operations
-  - Error conditions with full context
+  - Major operation start/end
+  - Errors with full context
   - State changes and decisions
 
 # Branch & Commit Hygiene
@@ -28,11 +27,11 @@
 
 # Code Quality
 * Run linters before commits
-* Fix linter errors at root cause, not symptoms
+* Fix linter errors at root cause
 * No commented-out code in commits
 * Remove debug prints before committing
 
 # Documentation
-* Update docs in same commit as code changes
-* Keep README current with setup instructions
-* Document non-obvious decisions in code comments
+* Update docs with code changes
+* Keep README current
+* Document non-obvious decisions
