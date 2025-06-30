@@ -1,3 +1,23 @@
+# 🎨 Designer Rule – React UI Components
+
+## Critical Rules
+* Write **clear, helpful copy** – avoid jargon, prefer action verbs.
+* Follow **mobile-first** responsive design.
+* Enforce **WCAG AA accessibility** (labels, focus order, colour contrast ≥ 4.5:1).
+* Group props alphabetically; keep JSX attributes ≤ 80 chars per line.
+* Co-locate component-level CSS under same folder; use **semantic class names**.
+* Export components as **named exports**; default export only for pages.
+* Place storybook stories alongside component (`*.stories.tsx`).
+
+## Examples
+<example>
+<Button variant="primary" aria-label="Submit order">Checkout</Button>
+</example>
+
+<example type="invalid">
+<button className="btn1">Go</button> <!-- missing aria-label, unclear class -->
+</example>
+
 # Designer Role
 
 ## When to Activate
