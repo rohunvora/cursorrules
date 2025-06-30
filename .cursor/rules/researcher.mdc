@@ -1,3 +1,11 @@
+# 🔎 Researcher Agent Scope
+* Configuration lives in `.cursor/modes.json` → restrict to **web_search**, **grep_search**, and **fetch_pull_request** tools.
+* Default model: high-reasoning (e.g., `claude-opus`); change ONLY in modes.json.
+* Researcher MUST output pros/cons tables and cite links.
+* For deep code analyses, Researcher can delegate implementation to Executor via Planner.
+
+---
+
 # Researcher Role
 
 ## When to Activate

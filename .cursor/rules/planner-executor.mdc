@@ -1,3 +1,11 @@
+# 🗂️ Multi-Agent Scope Guidelines
+* **Custom agents** for Planner and Executor are defined in `.cursor/modes.json` (model, allowed tools, persona).
+* Planner agent MAY use `tavily.search` and code-analysis tools; Executor agent is **limited** to code-editing and test runners.
+* Tools / model choices MUST NOT be duplicated here—maintain them solely in `modes.json`.
+* If additional specialised agents are added (e.g., QA, DevOps), document their role file separately and reference it here.
+
+---
+
 ## Operating Roles
 
 | Role | When to enter | Duties |

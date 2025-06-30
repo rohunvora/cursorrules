@@ -1,3 +1,11 @@
+# 🌱 Harvest Workflow
+* Treat every idea / bug note as **seed**; once actioned or obsolete, harvest it.
+* **Harvest cycle:** at task completion or pivot, move resolved notes to `lessons.mdc` or archive (step below).
+* Use the archive rule (see bottom) to relocate bulky sections—keeps scratchpad lean ≤ 200 lines.
+* Never delete information—archive instead.
+
+---
+
 # Scratchpad Management
 
 `/.cursor/scratchpad.md` **must** keep these headings (append, don't overwrite): ✅
